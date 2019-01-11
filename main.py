@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, request, redirect
 import pymongo
 from pymongo import MongoClient
-MONGO_URL = os.environ.get('mongohq-transparent-95617')
+MONGO_URL = os.environ.get('mongodb://heroku:ZjLlx4Vo8ndAed-4nX5k-OkoYsT5VB2MGa-taN0byrmyrSLt8OhcGz0CVReUDDfjxd9rRA3QQc0IhE8H9X8hSQ@candidate.66.mongolayer.com:10279,candidate.61.mongolayer.com:11249/app121630054')
 client = MongoClient(MONGO_URL)
 
 db = client.app121630054
