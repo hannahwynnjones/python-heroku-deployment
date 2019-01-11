@@ -8,7 +8,7 @@ client = MongoClient(MONGO_URL)
 db = client.app121630054
 collection = db.shoutouts
 
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route("/", methods=['GET'])
 def index():
@@ -21,7 +21,7 @@ def post():
     shout_id = collection.insert(shout)
     return redirect('/')
 
-if name == "main":
+if __name__ == "main":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
 
